@@ -1,0 +1,18 @@
+{
+	"icon": "google-chrome",
+	"label": "Google Chrome",
+	"description": "Google Chrome is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.",
+	"license": "Freeware",
+	"category": "Apps",
+	"scripts": {
+		"exec": {
+			"label": "Install",
+			"command": "run-as-root -s install.sh"
+		},
+		"undo": {
+			"label": "Remove",
+			"command": "run-as-root -s uninstall.sh"
+		},
+		"status": { "command": "dpkg -l google-chrome-stable" }
+	}
+}

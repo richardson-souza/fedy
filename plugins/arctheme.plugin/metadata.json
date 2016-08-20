@@ -12,6 +12,6 @@
 			"label": "Remove",
 			"command": "run-as-root -s uninstall.sh"
 		},
-		"status": { "command":"sudo dpkg -l arc-theme" }
+		"status": { "command":"dpkg -l arc-theme" }
 	}
 }
