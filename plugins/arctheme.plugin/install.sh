@@ -8,5 +8,5 @@ wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Rele
 apt-key add - < Release.key
 apt update
 apt install -y arc-theme
-} &> /dev/null
+} > /dev/null
 echo "done!"
