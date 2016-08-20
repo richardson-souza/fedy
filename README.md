@@ -1,6 +1,6 @@
 ### Introduction
 
-Fedy4ubuntu lets you install multimedia codecs and additional software that [Ubuntu](http://www.ubuntu.com/), like mp3 support, Adobe Flash, Oracle Java etc., and much more with just a few clicks.
+Fedy4Ubuntu lets you install multimedia codecs and additional software that [Ubuntu](http://www.ubuntu.com/), like mp3 support, Adobe Flash, Oracle Java etc., and much more with just a few clicks.
 
 ### License
 
@@ -20,7 +20,7 @@ Fedy4ubuntu relies on `GTK+3` and `GJS` for it's UI layer.
 
 ### Usage
 
-After installation, search for `Fedy4ubuntu` in the menu/overview or type `fedy4ubuntu` in the terminal.
+After installation, search for `Fedy4Ubuntu` in the menu/overview or type `fedy4ubuntu` in the terminal.
 
 ### Plugin structure
 
