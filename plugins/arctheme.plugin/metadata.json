@@ -12,6 +12,6 @@
 			"label": "Remove",
 			"command": "run-as-root -s uninstall.sh"
 		},
-		"status": { "command": "dpkg-query -W -f='${Status}' arc-theme 2>/dev/null | grep -c 'ok installed'" }
+		"status": { "command":"sudo dpkg -l arc-theme" }
 	}
 }
