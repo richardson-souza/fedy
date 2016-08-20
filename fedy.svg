@@ -6,11 +6,35 @@
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg2"
    height="48"
    viewBox="0 0 48 48"
-   width="48">
+   width="48"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fedy.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     id="namedview36"
+     showgrid="false"
+     inkscape:zoom="1.7383042"
+     inkscape:cx="17.76188"
+     inkscape:cy="24"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
   <metadata
      id="metadata54">
     <rdf:RDF>
@@ -39,7 +63,7 @@
        x1="12"
        id="linearGradient3908"
        xlink:href="#linearGradient3850"
-       gradientTransform="matrix(.5 0 0 2 12 -25)" />
+       gradientTransform="matrix(0.5,0,0,2,12,-25)" />
     <linearGradient
        gradientUnits="userSpaceOnUse"
        x2="10.548"
@@ -159,23 +183,20 @@
      y="4.25"
      x="-43"
      width="39" />
-  <g
-     id="g42"
-     style="fill-rule:evenodd">
-    <rect
-       id="rect44"
-       transform="matrix(0 1 1 0 0 0)"
-       style="fill:url(#linearGradient3908)"
-       height="24"
-       rx="2.059"
-       y="11"
-       x="18"
-       width="12" />
-    <path
-       id="path46"
-       d="m 33.28125,17.5 c 1.235743,0 2.21875,0.983007 2.21875,2.21875 l 0,8.5625 C 35.5,29.516993 34.516993,30.5 33.28125,30.5 l -20.5625,0 C 11.483007,30.5 10.5,29.516993 10.5,28.28125 l 0,-8.5625 C 10.5,18.483007 11.483007,17.5 12.71875,17.5 l 20.5625,0 z M 32.9375,18 13.0625,18 C 11.921814,18 11,18.921814 11,20.0625 l 0,7.875 C 11,29.078186 11.921814,30 13.0625,30 l 19.875,0 C 34.078186,30 35,29.078186 35,27.9375 l 0,-7.875 C 35,18.921814 34.078186,18 32.9375,18 z"
-       style="fill:url(#linearGradient3921)" />
-  </g>
+  <rect
+     width="12"
+     x="18"
+     y="11"
+     rx="2.059"
+     height="24"
+     style="fill:#dd4713;fill-rule:evenodd;fill-opacity:1"
+     transform="matrix(0,1,1,0,0,0)"
+     id="rect44" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:url(#linearGradient3921);fill-rule:evenodd"
+     d="m 33.28125,17.5 c 1.235743,0 2.21875,0.983007 2.21875,2.21875 l 0,8.5625 C 35.5,29.516993 34.516993,30.5 33.28125,30.5 l -20.5625,0 C 11.483007,30.5 10.5,29.516993 10.5,28.28125 l 0,-8.5625 C 10.5,18.483007 11.483007,17.5 12.71875,17.5 l 20.5625,0 z M 32.9375,18 13.0625,18 C 11.921814,18 11,18.921814 11,20.0625 l 0,7.875 C 11,29.078186 11.921814,30 13.0625,30 l 19.875,0 C 34.078186,30 35,29.078186 35,27.9375 l 0,-7.875 C 35,18.921814 34.078186,18 32.9375,18 Z"
+     id="path46" />
   <circle
      r="8"
      cx="-31"
