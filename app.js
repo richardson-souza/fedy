@@ -8,14 +8,14 @@ const Notify = imports.gi.Notify;
 const Pango = imports.gi.Pango;
 const Lang = imports.lang;
 
-const APP_NAME = "Fedy";
+const APP_NAME = "Fedy4Ubuntu";
 
 const Application = new Lang.Class({
     Name: APP_NAME,
 
     _init: function() {
         this.application = new Gtk.Application({
-            application_id: "org.folkswithhats.fedy",
+            application_id: "org.fedy4ubuntu",
             flags: Gio.ApplicationFlags.FLAGS_NONE
         });
 
@@ -33,11 +33,11 @@ const Application = new Lang.Class({
             });
 
         try {
-            let icon = Gtk.IconTheme.get_default().load_icon("fedy", 48, 0);
+            let icon = Gtk.IconTheme.get_default().load_icon("fedy4ubuntu", 48, 0);
 
             this._window.set_icon(icon);
         } catch (e) {
-            print("Failed to load application icon: " + e.message);
+            print("Falha ao carregar ícone da aplicação: " + e.message);
         }
 
         this._headerbar = new Gtk.HeaderBar({ show_close_button: true });
@@ -121,7 +121,7 @@ const Application = new Lang.Class({
 
                 parsed = JSON.parse(data);
             } catch (e) {
-                print("Error loading file " + file.get_path() + " : " + e.message);
+                print("Erro ao carregar arquivo " + file.get_path() + " : " + e.message);
             }
         }
 
@@ -189,7 +189,7 @@ const Application = new Lang.Class({
             [ ok, pid ] = GLib.spawn_async(workingdir, argvp, envp,
                                        GLib.SpawnFlags.SEARCH_PATH_FROM_ENVP | GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
         } catch (e) {
-            print("Failed to run process: " + e.message);
+            print("Falha ao executar processo: " + e.message);
 
             callback(null, 1, e);
         }
@@ -200,7 +200,7 @@ const Application = new Lang.Class({
             return;
         }
 
-        if (typeof pid === "number") {
+        if (typeof pid === "número") {
             GLib.child_watch_add(GLib.PRIORITY_DEFAULT, pid, (...args) => {
                 GLib.spawn_close_pid(pid);
 
@@ -302,10 +302,10 @@ const Application = new Lang.Class({
         if (malicious) {
             this._showDialog({
                 type: "question",
-                text: "The plugin <b>" + GLib.markup_escape_text(plugin.label, -1) + "</b> is trying to run the command \n" +
+                text: "O plugin <b>" + GLib.markup_escape_text(plugin.label, -1) + "</b> está tentando executar o comando \n" +
                       "<tt>" + GLib.markup_escape_text(command, -1) + "</tt>, \n" +
-                      "which might <b>" + GLib.markup_escape_text(description, -1) + "</b>. \n" +
-                      "Continue anyways?"
+                      "que poderá <b>" + GLib.markup_escape_text(description, -1) + "</b>. \n" +
+                      "Continue mesmo assim?"
             }, (dialog, response) => {
                 switch (response) {
                 case Gtk.ResponseType.OK:
@@ -360,7 +360,7 @@ const Application = new Lang.Class({
     _handleTask: function(button, spinner, plugin) {
         spinner.start();
 
-        button.set_label("Working...");
+        button.set_label("Trabalhando...");
         button.get_style_context().remove_class("suggested-action");
         button.get_style_context().remove_class("destructive-action");
         button.set_sensitive(false);
@@ -370,9 +370,9 @@ const Application = new Lang.Class({
 
                 try {
                     const notification = new Notify.Notification({
-                        summary: "Task " + (status === 0 ? "completed!" : "failed!"),
-                        body: plugin.label + " (" + action.label + ") " + (status === 0 ? "successfully completed." : "failed."),
-                        icon_name: "fedy",
+                        summary: "Task " + (status === 0 ? "completo!" : "falhou!"),
+                        body: plugin.label + " (" + action.label + ") " + (status === 0 ? "finalizado com sucesso." : "falhou."),
+                        icon_name: "fedy4ubuntu",
                         id: this._hashString(plugin.category + plugin.label)
                     });
 
@@ -384,7 +384,7 @@ const Application = new Lang.Class({
 
                     notification.show();
                 } catch (e) {
-                    print("Failed to show notification: " + e.message);
+                    print("Falha ao exibir notificação: " + e.message);
                 }
 
                 if (!this._window.visible && !(this._queue && this._queue.length)) {
@@ -396,7 +396,7 @@ const Application = new Lang.Class({
                 spinner.stop();
 
                 if (status === 0) {
-                    button.set_label("Finished!");
+                    button.set_label("Finalizado!");
                 } else {
                     button.set_label("Error!");
                 }
@@ -688,7 +688,7 @@ const Application = new Lang.Class({
         let system = this._loadPluginsFromDir(GLib.get_current_dir() + "/plugins");
 
         // User plugins
-        let user = this._loadPluginsFromDir(GLib.get_user_data_dir() + "/fedy/plugins");
+        let user = this._loadPluginsFromDir(GLib.get_user_data_dir() + "/fedy4ubuntu/plugins");
 
         this._extendObject(this._plugins, system, user);
     },
@@ -700,7 +700,7 @@ const Application = new Lang.Class({
         let system = this._loadJSON(GLib.get_current_dir() + "/config.json");
 
         // User config
-        let user = this._loadJSON(GLib.get_user_data_dir() + "/fedy/config.json");
+        let user = this._loadJSON(GLib.get_user_data_dir() + "/fedy4ubuntu/config.json");
 
         this._extendObject(this._config, system, user);
     }
