@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2015 Satyajit Sahoo <satyajit.happy@gmail.com> -->
+<!-- Copyright 2016 Richardson Souza <richardson.allan.souza@gmail.com> -->
 <application>
-    <id type="desktop">org.folkswithhats.fedy.desktop</id>
+    <id type="desktop">org.fedy4ubuntu.desktop</id>
     <licence>GFDL</licence>
-    <name>Fedy</name>
-    <summary>Install codecs, software, and more...</summary>
+    <name>Fedy4Ubuntu</name>
+    <summary>Instale codecs, software, e mais...</summary>
     <description>
         <p>
         Fedy lets you install multimedia codecs and additional software that
@@ -13,8 +13,8 @@
         </p>
     </description>
     <screenshots>
-        <screenshot type="default" width="1360" height="765">http://folkswithhats.org/assets/fedy.png</screenshot>
+        <screenshot type="default" width="1360" height="765">https://github.com/richardson-souza/fedy4ubuntu</screenshot>
     </screenshots>
-    <url type="homepage">http://folkswithhats.org/</url>
-    <updatecontact>satyajit.happy@gmail.com</updatecontact>
+    <url type="homepage">https://github.com/richardson-souza/fedy4ubuntu</url>
+    <updatecontact>richardson.allan.souza@gmail.com</updatecontact>
 </application>
