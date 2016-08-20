@@ -24,9 +24,9 @@ After installation, search for `Fedy4Ubuntu` in the menu/overview or type `fedy4
 
 ### Plugin structure
 
-Plugins can be placed under `~/.local/share/fedy/plugins/`, or the system plugins directory.
+Plugins can be placed under `~/.local/share/fedy4ubuntu/plugins/`, or the system plugins directory.
 
-Each plugin is a directory with the suffix `.plugin`, which consist of a JSON formatted metadata file. The metadata file contains information about the plugin and describes how `Fedy` should run the tasks.
+Each plugin is a directory with the suffix `.plugin`, which consist of a JSON formatted metadata file. The metadata file contains information about the plugin and describes how `Fedy4Ubuntu` should run the tasks.
 
 The plugins can run any command or scripts (`bash`, `python` etc.). In addtion to the system commands, `Fedy4Ubuntu` provides an additional command, `run-as-root` to allow running commands (e.g.- `run-as-root touch /some/file/somewhere`) or scripts (e.g.- `run-as-root -s do-stuff.sh`) as root.
 
@@ -36,7 +36,7 @@ Have a look at the existing plugins to know more about how to write plugins for 
 
 You can get the latest source code from the [github page](https://github.com/richardson-souza/fedy4ubuntu).
 
-`git clone https://github.com/folkswithhats/fedy`
+`git clone https://github.com/richardson-souza/fedy4ubuntu`
 
 ### Bugs and feature requests
 
