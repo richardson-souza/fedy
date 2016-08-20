@@ -1,6 +1,6 @@
 ### Introduction
 
-Fedy4ubuntu lets you install multimedia codecs and additional software that [Ubuntu](http://www.ubuntu.com/), like mp3 support, Adobe Flash, Oracle Java etc., and much more with just a few clicks.
+Fedy4Ubuntu lets you install multimedia codecs and additional software that [Ubuntu](http://www.ubuntu.com/), like mp3 support, Adobe Flash, Oracle Java etc., and much more with just a few clicks.
 
 ### License
 
