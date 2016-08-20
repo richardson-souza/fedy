@@ -2,7 +2,7 @@
 	"label": "Arc Theme",
 	"description": "Tema com design flat.",
 	"license": "GPLv3",
-	"category": "Temas",
+	"category": "Theme",
 	"scripts": {
 		"exec": {
 			"label": "Install",

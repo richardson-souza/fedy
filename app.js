@@ -360,7 +360,7 @@ const Application = new Lang.Class({
     _handleTask: function(button, spinner, plugin) {
         spinner.start();
 
-        button.set_label("Instalando...");
+        button.set_label("Working...");
         button.get_style_context().remove_class("suggested-action");
         button.get_style_context().remove_class("destructive-action");
         button.set_sensitive(false);
