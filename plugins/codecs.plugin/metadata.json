@@ -7,12 +7,12 @@
 	"scripts": {
 		"exec": {
 			"label": "Install",
-			"command": "run-as-root dnf -y install fedy-multimedia-codecs"
+			"command": "run-as-root apt install -y ubuntu-restricted-extras libavcodec-extra"
 		},
 		"undo": {
 			"label": "Remove",
-			"command": "run-as-root dnf -y --setopt clean_requirements_on_remove=1 erase fedy-multimedia-codecs"
+			"command": "run-as-root apt remove -y ubuntu-restricted-extras libavcodec-extra"
 		},
-		"status": { "command": "rpm --quiet --query fedy-multimedia-codecs" }
+		"status": { "command": "dpkg --get-selections | grep ubuntu-restricted-extras libavcodec-extra" }
 	}
 }
