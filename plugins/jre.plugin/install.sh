@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CACHEDIR="/var/cache/fedy/jre"
+CACHEDIR="/var/cache/fedy4ubuntu/jre"
 
 if [[ "$(uname -m)" = "x86_64" ]]; then
     ARCH="x64"

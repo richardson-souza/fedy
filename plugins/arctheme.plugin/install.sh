@@ -1,4 +1,7 @@
 #!/bin/bash
 
-dnf config-manager --add-repo=http://download.opensuse.org/repositories/home:Horst3180/Fedora_$(cat /etc/fedora-release | grep -o "[0-9]*")/home:Horst3180.repo
-dnf -y install arc-theme
+sudo sh -c "echo 'deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_16.04/ /' >> /etc/apt/sources.list.d/arc-theme.list"
+cd /tmp
+wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
+apt-key add - < Release.key
+apt-get update && apt install -y arc-theme

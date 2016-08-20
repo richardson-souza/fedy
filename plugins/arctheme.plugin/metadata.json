@@ -1,6 +1,6 @@
 {
 	"label": "Arc Theme",
-	"description": "A flat theme with transparent elements.",
+	"description": "Tema flat com elementos transparentes.",
 	"license": "GPLv3",
 	"category": "Themes",
 	"scripts": {
@@ -12,6 +12,6 @@
 			"label": "Remove",
 			"command": "run-as-root -s uninstall.sh"
 		},
-		"status": { "command": "rpm --quiet --query arc-theme" }
+		"status": { "command": "dpkg --get-selections | grep arc-theme" }
 	}
 }
