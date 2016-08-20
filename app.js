@@ -37,7 +37,7 @@ const Application = new Lang.Class({
 
             this._window.set_icon(icon);
         } catch (e) {
-            print("Falha ao carregar ícone da aplicação: " + e.message);
+            print("Failed to load application icon: " + e.message);
         }
 
         this._headerbar = new Gtk.HeaderBar({ show_close_button: true });
@@ -121,7 +121,7 @@ const Application = new Lang.Class({
 
                 parsed = JSON.parse(data);
             } catch (e) {
-                print("Erro ao carregar arquivo " + file.get_path() + " : " + e.message);
+                print("Error loading file " + file.get_path() + " : " + e.message);
             }
         }
 
@@ -189,7 +189,7 @@ const Application = new Lang.Class({
             [ ok, pid ] = GLib.spawn_async(workingdir, argvp, envp,
                                        GLib.SpawnFlags.SEARCH_PATH_FROM_ENVP | GLib.SpawnFlags.DO_NOT_REAP_CHILD, null);
         } catch (e) {
-            print("Falha ao executar processo: " + e.message);
+            print("Failed to run process: " + e.message);
 
             callback(null, 1, e);
         }
@@ -200,7 +200,7 @@ const Application = new Lang.Class({
             return;
         }
 
-        if (typeof pid === "número") {
+        if (typeof pid === "number") {
             GLib.child_watch_add(GLib.PRIORITY_DEFAULT, pid, (...args) => {
                 GLib.spawn_close_pid(pid);
 
@@ -302,10 +302,10 @@ const Application = new Lang.Class({
         if (malicious) {
             this._showDialog({
                 type: "question",
-                text: "O plugin <b>" + GLib.markup_escape_text(plugin.label, -1) + "</b> está tentando executar o comando \n" +
+                text: "The plugin <b>" + GLib.markup_escape_text(plugin.label, -1) + "</b> is trying to run the command \n" +
                       "<tt>" + GLib.markup_escape_text(command, -1) + "</tt>, \n" +
-                      "que poderá <b>" + GLib.markup_escape_text(description, -1) + "</b>. \n" +
-                      "Continue mesmo assim?"
+                      "which might <b>" + GLib.markup_escape_text(description, -1) + "</b>. \n" +
+                      "Continue anyways?"
             }, (dialog, response) => {
                 switch (response) {
                 case Gtk.ResponseType.OK:
@@ -360,7 +360,7 @@ const Application = new Lang.Class({
     _handleTask: function(button, spinner, plugin) {
         spinner.start();
 
-        button.set_label("Trabalhando...");
+        button.set_label("Instalando...");
         button.get_style_context().remove_class("suggested-action");
         button.get_style_context().remove_class("destructive-action");
         button.set_sensitive(false);
@@ -370,8 +370,8 @@ const Application = new Lang.Class({
 
                 try {
                     const notification = new Notify.Notification({
-                        summary: "Task " + (status === 0 ? "completo!" : "falhou!"),
-                        body: plugin.label + " (" + action.label + ") " + (status === 0 ? "finalizado com sucesso." : "falhou."),
+                        summary: "Task " + (status === 0 ? "completed!" : "failed!"),
+                        body: plugin.label + " (" + action.label + ") " + (status === 0 ? "successfully completed." : "failed."),
                         icon_name: "fedy4ubuntu",
                         id: this._hashString(plugin.category + plugin.label)
                     });
@@ -384,7 +384,7 @@ const Application = new Lang.Class({
 
                     notification.show();
                 } catch (e) {
-                    print("Falha ao exibir notificação: " + e.message);
+                    print("Failed to show notification: " + e.message);
                 }
 
                 if (!this._window.visible && !(this._queue && this._queue.length)) {
@@ -396,7 +396,7 @@ const Application = new Lang.Class({
                 spinner.stop();
 
                 if (status === 0) {
-                    button.set_label("Finalizado!");
+                    button.set_label("Finished!");
                 } else {
                     button.set_label("Error!");
                 }
