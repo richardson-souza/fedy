@@ -17,6 +17,13 @@ Copyright (C) [Richardson Souza](mailto:richardson.allan.souza@gmail.com)
 Fedy4ubuntu relies on `GTK+3` and `GJS` for it's UI layer.
 
 ### Installation
+1. Open terminal
+2. wget https://github.com/richardson-souza/fedy4ubuntu/archive/master.zip
+3. unzip master.zip
+4. cd fedy4ubuntu
+5. sudo chmod +x install
+6. sudo ./fedy4ubuntu
+7. enjoy
 
 ### Usage
 
