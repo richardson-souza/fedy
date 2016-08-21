@@ -22,6 +22,7 @@ Fedy4ubuntu relies on `GTK+3` and `GJS` for it's UI layer.
 3. unzip master.zip
 4. cd fedy4ubuntu
 5. sudo chmod +x install
+6. sudo ./install
 6. sudo ./fedy4ubuntu
 7. enjoy
 
