@@ -13,6 +13,7 @@ if [[ ! $(whoami) = "root" ]]; then
     exit 1
 fi
 
+echo "Check dependencies..."; apt -qq -y install gjs &> /dev/null
 echo "Enable the “partner” repository..."; sed -i "/^# deb .*partner/ s/^# //" /etc/apt/sources.list &> /dev/null
 echo "Update the system..."; apt -qq update &> /dev/null
 echo "Upgrade Ubuntu"; apt -qq -y dist-upgrade &> /dev/null
