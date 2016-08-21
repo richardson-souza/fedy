@@ -1,4 +1,4 @@
-# Install Fedy
+# Install Fedy4Ubuntu
 
 install-core:
 	install -dm755 $(DESTDIR)/usr/bin/

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Script to install Fedy4Ubuntu <https://github.com/richardson-souza/fedy4ubuntu>.
+# Copyright (C) 2016 Richardson Souza
+
+if [[ ! $(whoami) = "root" ]]; then
+    echo "Please run the script as root."
+    exit 1
+fi
+
+echo "Uninstall fedy4ubuntu..."; make uninstall &> /dev/null
+{
+rm -rf /usr/share/fedy4ubuntu/
+rm -f /usr/bin/fedy4ubuntu
+rm -f /usr/share/applications/org.fedy4ubuntu.desktop
+rm -f /usr/share/appdata/fedy4ubuntu.appdata.xml
+rm -f /usr/share/icons/hicolor/scalable/apps/fedy4ubuntu.svg
+rm -f /usr/share/icons/hicolor/scalable/apps/fedy-symbolic.svg
+rm -f /usr/share/polkit-1/actions/org.fedy4ubuntu.pkexec.run-as-root.policy
+gtk-update-icon-cache -f -t /usr/share/icons/hicolor
+} &> /dev/null
+echo "done!"
+
+# Please report bugs at <https://github.com/richardson-souza/fedy4ubuntu>
+# End of the Script

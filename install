@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Script to install Fedy4Ubuntu <https://github.com/richardson-souza/fedy4ubuntu>.
+# Copyright (C) 2016 Richardson Souza
+
+if [[ ! $(uname -m) = "x86_64" ]]; then
+    echo "Sorry! Only support 64 bits"
+    exit 1
+fi
+
+if [[ ! $(whoami) = "root" ]]; then
+    echo "Please run the script as root."
+    exit 1
+fi
+
+echo "Enable the “partner” repository..."; sed -i "/^# deb .*partner/ s/^# //" /etc/apt/sources.list &> /dev/null
+echo "Update the system..."; apt -qq update &> /dev/null
+echo "Upgrade Ubuntu"; apt -qq -y dist-upgrade &> /dev/null
+
+echo "Installing fedy4ubuntu..."; make install &> /dev/null
+
+# Please report bugs at <https://github.com/richardson-souza/fedy4ubuntu>
+# End of the Script
