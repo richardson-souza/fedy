@@ -1,4 +1,5 @@
 {
+	"icon": "atom",
 	"label": "Atom",
 	"description": " A hackable text editor for the 21st Century. Atom is a free and open source text editor that is modern, approachable, and hackable to the core.",
 	"license": "GPLv3",
