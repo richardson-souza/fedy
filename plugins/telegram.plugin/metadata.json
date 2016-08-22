@@ -1,8 +1,8 @@
 {
-	"icon": "telegram",
+	"icon": "/opt/telegram/telegram.svg",
 	"label": "Telegram",
-	"description": "Oracle Java(TM) Development Kit (JDK) 8 The JDK(TM) is a development environment for building and running applications, applets, and components using the Java programming language.",
-	"license": "",
+	"description": "Telegram Desktop taking back our right to privacy.",
+	"license": "GLP v3",
 	"category": "Apps",
 	"scripts": {
 		"exec": {
