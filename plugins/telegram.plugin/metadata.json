@@ -1,0 +1,18 @@
+{
+	"icon": "telegram",
+	"label": "Telegram",
+	"description": "Oracle Java(TM) Development Kit (JDK) 8 The JDK(TM) is a development environment for building and running applications, applets, and components using the Java programming language.",
+	"license": "",
+	"category": "Apps",
+	"scripts": {
+		"exec": {
+			"label": "Install",
+			"command": "run-as-root -s install.sh"
+		},
+		"undo": {
+			"label": "Remove",
+			"command": "run-as-root -s uninstall.sh"
+		},
+		"status": { "command": "dpkg -l telegram" }
+	}
+}
