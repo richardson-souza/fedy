@@ -7,6 +7,6 @@ cd /tmp
 wget -q http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_16.04/Release.key
 apt-key add - < Release.key
 apt update
-apt install -qq -y -o=Dpkg::Use-Pty=0apt arc-theme
+apt -qq install -y -o=Dpkg::Use-Pty=0apt arc-theme
 } > /dev/null
 echo "done!"
